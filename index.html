@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YugoMoo Yogurt Bar</title>
+    <style type="text/css">
+        /* Resetting some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body and general page settings */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #4f4f4f;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            color: #FF6347;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #2A3D4E;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        header nav ul li a:hover {
+            color: #FF6347;
+            transition: 0.3s ease;
+        }
+
+        /* Menu Section Styles */
+        #menu {
+            padding: 60px 10%;
+            background-color: #fff;
+        }
+
+        #menu h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .menu-item {
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 15px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .menu-description {
+            padding: 20px;
+        }
+
+        .menu-description h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .menu-description p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #FF6347;
+        }
+
+        /* About Section Styles */
+        #about {
+            padding: 60px 10%;
+            background-color: #EFEFEF;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section Styles */
+        #contact {
+            padding: 60px 10%;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #contact p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        #contact a {
+            color: #FF6347;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        #contact a:hover {
+            color: #2A3D4E;
+        }
+
+        /* Google Maps Section */
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #ffcc00;
+            color: #121212;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>YoguMoo Yogurt Bar</h1>
+        <img src="https://media-hosting.imagekit.io//a68f0ea11a0a44fc/inbound8591240851811636167.jpg?Expires=1835764576&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=AOQCh7OP6BIgKkDfSQzuvwgwWytdIL5zpBRSEkqHe6u9SQyFdZ1GhK4gGVNV87XaamhORHCcHVseEvqbQ-y0~8AmS-Rdh2GCI92m793YZ9uLD4dwboTlLBw-unJYbK0G~Jmq2cqyefPyJqGqf~FTPxUt2x1g9eL6rjrVl58j8K6Ev2i4x87AvbHsWG5Ll6v6LiCPxMHiimsEmmByLvYKI5hsndLhuzcmyhwhGCjdJ~YOLbqpstkXu~sGVfJFHhNJ~j2OT89DBLyn9DqsQ56IETUklEAXOzK6ul6XOFMr4J7Bl-QUyTu9yeO7B15FgkcG8LanXk6j-aSYYYriK3EiIw__" alt="YoguMoo"
+        width="200" height="200">
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#location">Find Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-container">
+    <div class="menu-item">
+    <img src="https://media-hosting.imagekit.io//f9675ba4fec84f7b/inbound3935723190619608127.jpg?Expires=1835764878&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=YVshmt2lDNiJvWFuQRp48VJUHMT3wx6cZpZO7cGFzx-aaRcm9e2yAu7Zoh7~aBYL9nIm5plZyZxssKwlr8~qZpbVMv050ElES22587qSit3IxLwiwdV7WaV70eaRqw4ArcBRdv6EU0LtLQpRR-dYpB5pjqkT~RYkZZs3LHcDeNA6qFmDINsWK~Vnu0PaAHK6NRYSabE0MKSqiOHZRGS3bkCw5MooYIiZODhXxV33omglvFYHVufFk2vGLw57e3HbYhEzVMExgLGpNI-lL018cef~OZBZ7JgvLklJJNHgJ2w-Dlsysed2VGg8VDLaa2uTJMRGAQoEWN5O0wGfOi0a9g__" alt="YoguMoo Parfait">
+    <div class="menu-description">
+    <h3>YoguMoo Parfait</h3>
+    <p>"Indulge in the creamy goodness of YoguMoo's yogurt parfait, a delightful blend of fresh fruit, crunchy granola, and velvety yogurt!
+    </p>
+    <div class="price">₱130</div>
+    </div>
+    </div>
+    <div class="menu-item">
+    <img src="https://media-hosting.imagekit.io//7ed5029ddf584b57/inbound6661312455002794399.jpg?Expires=1835766158&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=gN6rHbHj2GVJs0j74fKzzGNbxDWSIkzW0K8QMyDh0tlcw3cGpruJWR7rDUlDMRPBiaH8zF2TSYQSMpQarjz1BSS-YHpAc~va990h98SPlXqQANZpkOYQGN2BGG2ecmRrnFRkj9-JYj2xePZ3uiCq-ZCUrkxb1V~FUUhQhQylRAzGXwWwf3017uAI~J5Qwz8IDLSCrmoY6aMsgC6CugtAz4xHsbay782rxuVUBsuqS883cBIZOYM1MQdxMs4uaDwreabNcKMmsF9ia0~P0jE8mGAbA4JovLJsIJRnG-EskaIWrKcCAYpzFOSJvFOWNkHmlJi65T~fRY5XOVXvBqsKeA__" alt="YoguMoo MiniGo">
+    <div class="menu-description">
+    <h3>YoguMoo MiniGo</h3>
+    <p>"Delight in the smooth, fruity goodness of YoguMoo's Mini Mango yogurt, a burst of tropical flavor in every bite!"
+    </p>
+    <div class="price">₱85</div>
+    </div>
+    </div>
+    <div class="menu-item">
+    <img src="https://media-hosting.imagekit.io//36ecc75e9bcf4c1d/inbound5203288159160605040.jpg?Expires=1835767391&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=GptV9xGiEQejC~YUV9AFOd1KNX0jbH9i-ux6DelsUQBfxF3ctk~DVYzL7Lk7URLhDV1qr~-TUgYD5LWzK9qBIEUzq4vgyn5z12biWpoOwgD7B18l4qBV6vbFojda46cPXdYUNkCOEwUnR~eJvCB2qle9NKZW59Ns6I4OblEzeLkE-wFVltEPDLGF1R9x4gpCIzzB0ThRuEwm~l0N4ufSUyxIrIQfgduzGr6GhM2ejh~MMrECopUPr8K3Rwrg5OcIo0g8KGqr5~Sx3JyltcQX9DPHHzU6Zd3OEO3OkkvuHjwBbYI2nmLi27frrHxCNue3NrnHeELTLY4fjeIq1vIg-Q__" alt="YoguMoo Biscoff">
+    <div class="menu-description">
+    <h3>YoguMoo Biscoff</h3>
+    <p>Experience the perfect fusion of creamy YoguMoo yogurt and the irresistible taste of Biscoff in every bite!
+    </p>
+    <div class="price">₱85</div>
+    </div>
+    </div>
+    <div class="menu-item">
+    <img src="https://media-hosting.imagekit.io//bae2a4bdb0714382/inbound2592095349147089542.jpg?Expires=1835767581&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wNWVS9v-m6vml9rmX6ir46bZCcK0v8t24fRGfP4pI92JiSlfRUV8AQXI6dKeVBLhAUEDdkFbu1A0En47QN~DK9GtLegqDYKz3ayelmvLSzMZfInJIXZizKlF3MfUq-VzYup2nEqP-7WgrbyGJ5lQo~Gd3M~sH3tX7XOWR~RnZ3Yh~wYzvVRDZYehkkc0xIX2znE7Edtcafv0HEBRdhXGrHqyUvuMoWe~cuP3wVnKg4yemesFaBP-nP-NO3sxgIW2ItetJU0ZXDUExmM3N2mP4b5FLFQVPmQMEnaOv0FU4Un2L0JwWx6ho-K~77-iOPeTka41k0W5N8tkfbLBTqJmVg__" alt="YoguMoo Matcha Fudge">
+    <div class="menu-description">
+    <h3>YoguMoo Matcha Fudge</h3>
+    <p>Delight in the creamy fusion of vibrant matcha and decadent fudge with YoguMoo's Matcha Fudge yogurt!
+    
+    </p>
+    <div class="price">₱85</div>
+    </div>
+    </div>
+    <div class="menu-item">
+    <img src="https://media-hosting.imagekit.io//ff4cfdaf1ad1445d/inbound8755165204489397030.jpg?Expires=1835767925&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=emUgvsLsl4j4JVlu0vO51-VcFPq6~k60viwcV5t3OqOnVKZkwbYiTMbOjuEtmVdgLB2d5o7JW~k-Xhw4zDVAasxeADbBbpMrpgn09B3WGvM1JaObyDpm5FMgxWgZ8CMYk1IL6dHo2n~oAhNludq-lLGYGJEmelq-UtYOqO~IWPGboJp9EQO~OUOIZ-ndGibbGYc9l~DlSmXPSIuyhRVZg5oXLBbGKMw-HR57FAsPZqhQqQmp-W~btPw~k~yeJ8QGRqPf8u~wUOAJpUeG2-H2wKFWxez5-owYMsAFJDMww47SoL5cFYd9V3bhNrPMTUyd1BE5ZPbRFIBnPnJXQvU-aw__" alt="ChocoBerry">
+    <div class="menu-description">
+    <h3>YoguMoo ChocoBerry</h3>
+    <p>Treat yourself to the perfect combination of creamy YoguMoo yogurt, rich chocolate syrup, and sweet strawberry fruit flavor!
+    
+    </p>
+    <div class="price">"
+            <!-- Menu items here -->
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Yogumoo Yogurt Bar! We specialize in delicious frozen yogurt, offering a variety of flavors and toppings to satisfy every craving. Our goal is to provide a fun, fresh, and tasty experience for all our customers. Whether you're looking for a quick treat or a place to hang out, we're here to serve you!</p>
+    </section>
+
+    <section id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align: center;">Have questions? Reach out to us:</p>
+    <p style="text-align: center;"><strong>Phone:</strong> 09175502828</p>
+    <p style="text-align: center;"><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1BeSHpqaHL/" target="_blank" style="color: #ffcc00;">YoguMoo Yogurt Bar Alaminos</a></p>
+    <p style="text-align: center;"><strong>Instagram:</strong> <a href="https://www.instagram.com/yogumooph?igsh=NGxrYmo3NXZqNmk2" style="color: #ffcc00;">YoguMoo Yogurt Bar Alaminos</a></p>
+    </a>
+    </p>
+    
+    <section id=" Find us">
+    <h2>Location</h2>
+    <strong>Visit Us:</strong> 
+    <a href="https://www.google.com/maps?q=Yogumoo,+Marcos+Avenue,+Poblacion,+Alaminos,+2404+Pangasinan&ftid=0x3393dd771bb136b9:0x2915a7009c290f4f&hl=en-PH&gl=ph&entry=gps&g_ep=CAISBjYuNTguMRgAINeCA0ICUEg%3D&g_st=ic&g_st=ic&fbclid=PAY2xjawI0_KJleHRuA2FlbQIxMAABpgMvyCoLivdHee0jlFfv-VzGBCpoVZi7k1-PTTl-xYoVpiIhSGI9ifo1WA_aem_DjlkxbDJ1o7OpPlTg_OiLQ" target="_blank" style="color: #ffcc00;">
+    Marcos Avenue, Alaminos City, Pangasinan
+    </a>
+    </p>
+    </section>
+     <footer>
+        <p>&copy; 2025 YoguMoo Yogurt Bar. All Rights Reserved.</p>
+    </footer>
+    </body>
+</html>
